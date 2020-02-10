@@ -75,7 +75,7 @@ def adj_r2(X, y_true, y_predicted):
 
 # Classification metrics
 
-def specificity(y_true, y_predicted):
+def specificity(y, y_predicted):
     """
     Parameters:
     -----------
@@ -90,7 +90,7 @@ def specificity(y_true, y_predicted):
     --------
     The specificity score: a floating point number between 0 and 1
     """
-    tn,fp,tp,fn = confusion_matrix(y, y_pred).ravel()
+    tn,fp,tp,fn = confusion_matrix(y, y_predicted).ravel()
     return tn / (tn + fp)
 
 def negative_predictive_value(y_true, y_predicted):
@@ -188,11 +188,11 @@ def confusion_matrix_dataframe(y_true, y_predicted, columns, index):
     matrix = pd.DataFrame(cm, columns = columns, index = index)
     return matrix
 
-def classification_summary(y_true, y_predicted):
+def classification_summary(y, y_predicted):
     """
     Parameters:
     -----------
-    y_true      : the true y values      : np.ndarray : :
+    y           : the true y values      : np.ndarray : :
     y_predicted : the predicted y values : np.ndarray : :
 
     Description
@@ -204,7 +204,7 @@ def classification_summary(y_true, y_predicted):
     spe = specificity(y, y_predicted)
     mcc = matthews_corrcoef(y, y_predicted)
     auc = roc_auc_score(y, y_predicted)
-    binary_classification_summary = pd.DataFrame([acc, sen, spe, mcc, auc], 
+    binary_classification_summary = pd.DataFrame([sen, spe, mcc, auc], 
                                                  index = ["Sensitivity", "Specificity", "MCC", "AUROC"], 
                                                  columns = ["Scores"])
     return binary_classification_summary
