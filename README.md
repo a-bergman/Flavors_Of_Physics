@@ -24,11 +24,13 @@ After tuning and evaluating each model, we were able to determine that our best 
 
 It was difficult choosing our best model because, while our best model had better test scores, our second best model was much less overfit.  Due to the potential significance of the results, we felt it was best for us to choose our highest performing model.  Overall our model scores were very high, especially our AUROC and Matthews Correlation Coefficient , 0.88 and 0.76, both of which indicate a model with high performance.  Additionally, we had minimal numbers of false positives and negatives.
 
-While we are confident with our model's performance, we believe there is still room for significant improvement.  Going forward, we would like to experiment with feature engineering and further tune the model.  That being said, time is a limiting factor: the XGBoost algorithm is not the fastest and can take a very long time when grid-searching.
-
 -------
 
 # Next Steps
+
+While we are confident with our model's performance, we believe there is still room for significant improvement.  Going forward, we would like to experiment with feature engineering and further tune the model.  That being said, time is a limiting factor: the XGBoost algorithm is not the fastest and can take a very long time when grid-searching.
+
+Further down the road, we are considering creating a feed-forward neural network to see how one would perform in comparison.
 
 -------
 
