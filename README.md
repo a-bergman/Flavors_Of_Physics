@@ -31,9 +31,3 @@ It was difficult choosing our best model because, while our best model had bette
 While we are confident with our model's performance, we believe there is still room for significant improvement.  Going forward, we would like to experiment with feature engineering and further tune the model.  That being said, time is a limiting factor: the XGBoost algorithm is not the fastest and can take a very long time when grid-searching.
 
 Further down the road, we are considering creating a feed-forward neural network to see how one would perform in comparison.
-
--------
-
-# Links
-
-- The Google Slides presentation can be found [here]().
